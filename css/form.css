@@ -1,0 +1,116 @@
+/* PROGRESS BAR */
+.progress-bar {
+  height: 6px;
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #007bff;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* FORM TITLES */
+.form-step h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+/* INPUTS */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0,123,255,0.4);
+}
+
+/* BUTTONS */
+button,
+.back-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.next-btn,
+.submit-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.prev-btn {
+  background: #ddd;
+  color: #333;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* STEP VISIBILITY */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: fadeIn 0.3s;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* BUTTON GROUP */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* THANK YOU BUTTON */
+.back-btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* FULL RESPONSIVENESS */
+@media (max-width: 480px) {
+  input {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
