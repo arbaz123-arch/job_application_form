@@ -1,61 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apply – Taskify Careers</title>
-  <meta name="description" content="Apply for jobs at Taskify with our simple online application form.">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/form.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Application Form</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/form.css" />
 </head>
 <body>
-  <div id="header"></div>
 
-  <main class="form-container">
-    <h1>Job Application</h1>
-    <div class="progress-bar"><div id="progress"></div></div>
+  <!-- Header Load -->
+  <div data-include="header"></div>
 
-    <form id="jobForm">
+  <!-- MAIN FORM PAGE -->
+  <main class="form-wrapper">
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <!-- Multi-step Form Container -->
+    <section id="multiStepForm" class="form-container">
+
       <!-- Step 1 -->
-      <div class="form-step active">
-        <h2>Step 1: Personal Info</h2>
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <button type="button" class="next">Next</button>
+      <div class="form-step" data-step="1">
+        <h2>Personal Details</h2>
+        <label>Full Name</label>
+        <input type="text" id="fullName" />
+
+        <label>Email</label>
+        <input type="email" id="email" />
+
+        <label>Phone</label>
+        <input type="text" id="phone" />
+
+        <button class="next-btn">Next</button>
       </div>
 
       <!-- Step 2 -->
-      <div class="form-step">
-        <h2>Step 2: Experience</h2>
-        <input type="number" name="experience" placeholder="Years of Experience" required>
-        <input type="text" name="skills" placeholder="Key Skills (comma separated)" required>
-        <button type="button" class="prev">Back</button>
-        <button type="button" class="next">Next</button>
+      <div class="form-step" data-step="2">
+        <h2>Education Details</h2>
+        <label>Highest Qualification</label>
+        <input type="text" id="qualification" />
+
+        <label>Passing Year</label>
+        <input type="text" id="passingYear" />
+
+        <div class="buttons">
+          <button class="prev-btn">Previous</button>
+          <button class="next-btn">Next</button>
+        </div>
       </div>
 
       <!-- Step 3 -->
-      <div class="form-step">
-        <h2>Step 3: Upload Resume</h2>
-        <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
-        <button type="button" class="prev">Back</button>
-        <button type="button" class="next">Next</button>
+      <div class="form-step" data-step="3">
+        <h2>Experience Details</h2>
+        <label>Total Experience (Years)</label>
+        <input type="text" id="experience" />
+
+        <label>Last Company</label>
+        <input type="text" id="company" />
+
+        <div class="buttons">
+          <button class="prev-btn">Previous</button>
+          <button class="next-btn">Next</button>
+        </div>
       </div>
 
-      <!-- Step 4 -->
-      <div class="form-step">
-        <h2>Step 4: Review & Submit</h2>
-        <div id="review"></div>
-        <button type="button" class="prev">Back</button>
-        <button type="submit" class="btn btn--primary">Submit</button>
+      <!-- Step 4 (Review) -->
+      <div class="form-step" data-step="4">
+        <h2>Review Your Application</h2>
+
+        <div id="reviewSection">
+          <!-- Filled by JS -->
+        </div>
+
+        <div class="buttons">
+          <button class="prev-btn">Previous</button>
+          <button class="submit-btn">Submit</button>
+        </div>
       </div>
-    </form>
+
+    </section>
+
   </main>
 
-  <div id="footer"></div>
+  <!-- Footer Load -->
+  <div data-include="footer"></div>
+
+  <!-- Loader + Form JS -->
   <script src="../js/loader.js"></script>
-  <script type="module" src="../js/form.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/form.js"></script>
 </body>
 </html>
