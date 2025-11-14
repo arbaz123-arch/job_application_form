@@ -1,44 +1,50 @@
-/* MAIN WRAPPER FOR ALL PAGES */
+/* MAIN WRAPPER */
 .form-wrapper,
 .thankyou-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 15px;
 }
 
-/* FORM CARD */
+/* FORM CARD (auto-size for all devices) */
 .form-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 480px;
   background: #fff;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 20px;
+  border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* THANK YOU PAGE BOX */
+/* Thankyou page box */
 .thankyou-box {
-  max-width: 600px;
   width: 100%;
-  text-align: center;
+  max-width: 480px;
   background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
+  padding: 30px 20px;
+  border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* RESPONSIVE BREAKPOINTS */
-@media (min-width: 768px) {
+/* Tablet Screens */
+@media (min-width: 600px) {
   .form-container,
   .thankyou-box {
-    padding: 40px;
+    padding: 30px;
+    max-width: 520px;
   }
 }
 
+/* Desktop Screens */
 @media (min-width: 1024px) {
   .form-wrapper,
   .thankyou-wrapper {
-    padding: 50px;
+    padding: 40px;
+  }
+
+  .form-container {
+    max-width: 600px;
+    padding: 40px;
   }
 }
